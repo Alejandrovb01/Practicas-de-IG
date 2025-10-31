@@ -1,6 +1,7 @@
 # Semana 6-7: Sistema solar
 
 [Proyecto interactivo en codesandbox](https://codesandbox.io/p/sandbox/6ffw7j).
+
 [Vídeo demostrativo]().
 
 ## Descripción del proyecto
@@ -17,4 +18,5 @@ Para hacer posible este proyecto, se ha recurrido, principalmente, a los ejemplo
 
 Por último, las imágenes empleadas en las texturas han sido obtenidas de las siguientes páginas:
 - [JHT's Planetary Pixel Emporium](https://planetpixelemporium.com/index.php).
+
 - [HiClipart](https://www.hiclipart.com/)
