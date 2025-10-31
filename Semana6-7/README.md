@@ -2,7 +2,7 @@
 
 [Proyecto interactivo en codesandbox](https://codesandbox.io/p/sandbox/6ffw7j).
 
-[Vídeo demostrativo]().
+[Vídeo demostrativo](https://youtu.be/Zat67wYjzKU).
 
 ## Descripción del proyecto
 
@@ -24,4 +24,5 @@ Por último, las imágenes empleadas en las texturas han sido obtenidas de las s
 - [JHT's Planetary Pixel Emporium](https://planetpixelemporium.com/index.php).
 
 - [HiClipart](https://www.hiclipart.com/)
+
 
