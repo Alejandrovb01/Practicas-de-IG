@@ -6,7 +6,7 @@
 
 ## Descripción del proyecto
 
-Este proyecto permite visualizar la colonización de América desde 1492 (llegada de Colón) hasta 1775 (poco antes de la Revolución Americana) en un mapa con relieve. En el mapa, con el paso de los años, se dibujan polígonos representando los territorios colonizados, con diferentes colores en función de la potencia europea que los controló.
+Este proyecto permite visualizar la colonización de América desde 1492 (llegada de Colón) hasta 1775 (poco antes de la Revolución Americana) en un mapa con relieve. En el mapa, con el paso de los años, se dibujan polígonos que representan los territorios colonizados, de distintos colores según la potencia europea que los controló.
 Una leyenda en la esquina inferior izquierda muestra el color de cada potencia, y un título arriba en el centro muestra qué territorio, potencia y fecha se está representando.
 
 ## Controles de la simulación
@@ -15,7 +15,7 @@ El mapa puede ser manipulado con el ratón para rotarlo (clic izquierdo), trasla
 
 ## Datos de la simulación
 
-Los datos son leídos de un documento csv que contiene los siguientes campos: year,region,empire,polygon
+Los datos son leídos de un documento csv que contiene los siguientes campos:
 - year: año en que se ocupó el territorio.
 - region: nombre del territorio ocupado.
 - empire: potencia que ocupó el territorio en ese año.
