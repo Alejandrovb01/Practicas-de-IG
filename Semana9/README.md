@@ -2,6 +2,8 @@
 ## Descripción del proyecto
 En este proyecto recrea algunos de los forros (patrones) heráldicos más comunes mediante shaders GLSL procedimentales. Mi motivación ha sido mi interés personal por la heráldica, pues he visto en este proyecto la posibilidad de recrear algunos de sus elementos más característicos.
 
+Si bien en este README se muestran algunas imágenes de ejemplo, en la carpeta ```images``` se pueden encontrar algunos patrones más con otros colores o con los colores invertidos.
+
 ## Realización del código
 
 ### Armiño
@@ -56,4 +58,5 @@ Finalmente, el vero en punta (_vair in pointe_) se realiza combinando las dos op
 
 ## Bibliografía
 La principal fuente bibliográfica para la realización de este proyecto ha sido la documentación proporcionada por el profesor de la asignatura. No obstante, también se ha hecho uso de inteligencia artificial como fuente de apoyo para facilitar la comprensión del lenguaje y para el desarrollo de algunas funcionalidades.
+
 
