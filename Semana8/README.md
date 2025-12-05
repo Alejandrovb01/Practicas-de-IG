@@ -10,7 +10,7 @@ Este proyecto hace posible una simulación del deporte olímpico del tiro al pla
 
 ## Aspectos técnicos
 
-La simulación está desarrollada con Three.js para la parte gráfica y Ammo.js como motor físico. La escena incluye una cámara en perspectiva con controles de órbita, un plano como suelo y un sistema de luces con sombras. Cada plato se modela como un cilindro con cuerpo rígido en Ammo al que se le asigna una posición inicial aleatoria en el eje x, y unas posiciones fijas en los ejes z e y. Además, estos poseen una velocidad en los ejes x e y que genera una trayectoria parabólica bajo la gravedad.
+La simulación está desarrollada con Three.js para la parte gráfica y Ammo.js como motor físico. La escena incluye una cámara en perspectiva con controles de órbita, un plano como suelo y un sistema de luces con sombras. Cada plato se modela como un cilindro con cuerpo rígido en Ammo, al que se le asigna una posición inicial aleatoria en el eje x y unas posiciones fijas en los ejes z e y. Además, estos poseen una velocidad en los ejes x e y, lo que genera una trayectoria parabólica bajo el efecto de la gravedad.
 Las balas se crean como esferas rápidas, usando detección continua de colisiones (CCD) para evitar que atraviesen los platos.
 
 En cada frame se avanza la simulación física y se actualizan las transformaciones de los objetos Three.js. Cuando se detecta un impacto con suficiente impulso sobre un plato, este se elimina y se sustituye por varios fragmentos poligonales, cada uno con su propio cuerpo rígido y una pequeña velocidad adicional para simular el efecto de rotura.
