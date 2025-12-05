@@ -1,25 +1,34 @@
-# Semana 8: Animación
+# Semana 8: Visualización de datos geográficos
 
-[Proyecto interactivo en codesandbox](https://z8nrm8.csb.app/).
+[Proyecto interactivo en codesandbox](https://codesandbox.io/p/sandbox/5d6gp5).
 
-[Vídeo demostrativo](https://youtu.be/p4-5je-ap8c).
+[Vídeo demostrativo](https://youtu.be/3yp_Mevbf9U).
 
 ## Descripción del proyecto
 
-Este proyecto hace posible una simulación del deporte olímpico del tiro al plato. En ella, se generan platos aleatorios que avanzan describiendo una trayectoria parabólica. El objetivo es que el jugador dispare a los platos (y los rompa) antes de que estos toquen el suelo, en cuyo caso también se romperán.
-
-## Aspectos técnicos
-
-La simulación está desarrollada con Three.js para la parte gráfica y Ammo.js como motor físico. La escena incluye una cámara en perspectiva con controles de órbita, un plano como suelo y un sistema de luces con sombras. Cada plato se modela como un cilindro con cuerpo rígido en Ammo, al que se le asigna una posición inicial aleatoria en el eje x y unas posiciones fijas en los ejes z e y. Además, estos poseen una velocidad en los ejes x e y, lo que genera una trayectoria parabólica bajo el efecto de la gravedad.
-Las balas se crean como esferas rápidas, usando detección continua de colisiones (CCD) para evitar que atraviesen los platos.
-
-En cada frame se avanza la simulación física y se actualizan las transformaciones de los objetos Three.js. Cuando se detecta un impacto con suficiente impulso sobre un plato, este se elimina y se sustituye por varios fragmentos poligonales, cada uno con su propio cuerpo rígido y una pequeña velocidad adicional para simular el efecto de rotura.
+Este proyecto permite visualizar la colonización de América desde 1492 (llegada de Colón) hasta 1775 (poco antes de la Revolución Americana) en un mapa con relieve. En el mapa, con el paso de los años, se dibujan polígonos que representan los territorios colonizados, de distintos colores según la potencia europea que los controló.
+Una leyenda en la esquina inferior izquierda muestra el color de cada potencia, y un título arriba en el centro muestra qué territorio, potencia y fecha se está representando.
 
 ## Controles de la simulación
 
-Al pulsar tanto el clic derecho como el izquierdo del ratón, se puede disparar una bala. Si se mantiene el clic izquierdo, es posible rotar la escena. Por otra parte, al mantener el clic derecho es posible desplazarla. La rueda del ratón permite realizar un efecto de zoom.
-Finalmente, al pulsar la tecla "espacio" se generará un nuevo plato. Todos ellos parten de la misma coordenada 'z'; sin embargo, se generan con una coordenada 'x' aleatoria, de forma que su posición sea impredecible para el jugador.
+El mapa puede ser manipulado con el ratón para rotarlo (clic izquierdo), trasladarlo (clic derecho) y aumentarlo (rueda), mejorando así su visualización.
+
+## Datos de la simulación
+
+Los datos son leídos de un documento CSV que contiene los siguientes campos:
+- year: año en que se ocupó el territorio.
+- region: nombre del territorio ocupado.
+- empire: potencia que ocupó el territorio en ese año.
+- polygon: una serie de coordenadas que definen los vértices del polígono que representa la región conquistada. El formato de las coordenadas es latitud:longitud (usando ':' como separador).
 
 ## Bibliografía
 
-Para la realización del código se ha recurrido, principalmente, a los ejemplos incluidos en el enunciado de la práctica. Además, se han empleado herramientas de inteligencia artificial para descubrir funciones nuevas, como la fragmentación de polígonos.
+El mapa de elevación se ha obtenido de la siguiente página:
+- [Unreal PNG Heightmap](https://manticorp.github.io/unrealheightmap/#latitude/20.961439614096832/longitude/-97.03125/zoom/3/outputzoom/4/width/1639/height/2100)
+
+Con las coordenadas obtenidas en la página anterior, se ha podido obtener el mapa visual de esta otra página:
+- [geojson.io](https://geojson.io/#map=2.03/21.02/-105.95)
+
+El dataset CSV fue generado con inteligencia artificial, lo que permitió incluir en él los eventos de la conquista más relevantes y las coordenadas geográficas con las que dibujar los polígonos.
+
+Para la realización del código se ha recurrido, principalmente, a los ejemplos incluidos en el enunciado de la práctica. Además, se han empleado herramientas de inteligencia artificial para descubrir funciones nuevas, como la creación de polígonos, así como para agilizar la creación de animaciones.
